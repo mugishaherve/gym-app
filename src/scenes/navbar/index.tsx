@@ -1,6 +1,6 @@
 
 import { Bars3Icon, XMarkIcon} from "@heroicons/react/20/solid"
-import Logo from "@/assets/solgym2.png"
+import Logo from "@/assets/Logo.png"
 import Link from "./Link"
 import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
