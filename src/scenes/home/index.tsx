@@ -24,21 +24,21 @@ const Home = ({setSelectedPage }: Props) => {
             {/* main header */}
             <div className='z-10 mt-32 md:basis-3/5'>
                    {/* headings */}
-                <div className='md: -mt-20'>
+                <div className='md:-mt-20'>
                     <div className='relative'>
-                        <div className="before:absolute before:-top-20 before:content-evolvetext">
+                        <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
                             <img src={HomePageText} alt="home-page-text" />
                         </div>
                     </div>
 
-                    <p>
+                    <p className='mt-8 text-sm'>
                         Unrivaled Gym. Unparalleled Training Fitness Classes.
                         World Class Studios to get the Body Shapes That you Dream of.. Get Your Dream
                         Body Now.
                     </p>
                 </div>
                 {/* actions */}
-                <div>
+                <div className='mt-8 flex items-center gap-8'>
                     <ActionButton setSelectedPage={setSelectedPage}>
                         Join Now 
                     </ActionButton>
@@ -50,15 +50,16 @@ const Home = ({setSelectedPage }: Props) => {
                 </div>
             </div>
             {/* image */}
-            <div>
+            <div className='flex basis-3/5 justify-center md:z-10
+            md:ml-40 md:mt-16 md:justify-items-end'>
                 <img src={HomePageGraphic} alt="home-page" />
             </div>
         </div>
         {/* sponsors */}
         {isAboveMediumScreens && (
-            <div>
-                <div>
-                    <div>
+            <div className='h-[150px] w-full bg-primary-100 py-10'>
+                <div className='mx-auto w-5/6'>
+                    <div className='flex w-3/5 items-center justify-between gap-8'>
                         <img src={sponsorRedbull} alt="redbull-sponsor" />
                         <img src={sponsorForbes} alt="forbes-sponsor" />
                          <img src={sponsorFortune} alt="fortune-sponsor" />
