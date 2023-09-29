@@ -27,9 +27,9 @@ export default {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"]
       },
-
+  
       content: {
-        otherimage: "url('./src/assets/background.jpg')",
+        evolvetext: "url('@/assets/EVOLVE.png')",
         third: "url('./src/assets/background.jpg')",
         forth: "url('./src/assets/background.jpg')",
         fifth: "url('./src/assets/background.jpg')",
