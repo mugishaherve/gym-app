@@ -1,11 +1,13 @@
-import React from 'react'
+
 import { HomeModernIcon, UserGroupIcon, AcademicCapIcon } from '@heroicons/react/20/solid'
-import { AboutType, SelectedPage } from '@/shared/types'
+import { BenefitType, SelectedPage } from '@/shared/types'
 import { motion } from "framer-motion"
 import Htext from '@/shared/Htext'
+import Benefit from './Benefit'
 
 
-const abouts: Array<AboutsType> = [
+
+const benefits: Array<BenefitType> = [
     {
         icon: <HomeModernIcon className='h-6 w-6' />,
         title: "State of the Art Facilities",
@@ -24,16 +26,19 @@ const abouts: Array<AboutsType> = [
 ]
 
 type Props = {
+    icon: JSX.Element,
+    title: string,
+    description: string,
    setSelectedPage: (value: SelectedPage) =>void
 }
 
-const Abouts = ({setSelectedPage}: Props) => {
+const Benefits = ({setSelectedPage}: Props) => {
   return (
       <section
-          id='abouts'
+          id='benefits'
           className='mx-auto min-h-full w-5/ py-20 '>
           <motion.div
-              onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
+              onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}>
               {/* header */}
               <div className='md:my-5 md:w-3/5'>
                   <Htext>MORE THAN JUST GYM.</Htext>
@@ -43,12 +48,12 @@ const Abouts = ({setSelectedPage}: Props) => {
               </div>
               {/* about */}
               <div className='mt-5 items-center justify-between gap-8 md:flex'>
-                  {abouts.map((about: AboutType) => (
-                      <About
-                          key={about.title}
-                          icon={about.icon}
-                          title={about.title}
-                          description={about.description}
+                  {benefits.map((benefit: BenefitType) => (
+                      <Benefit
+                          key={benefit.title}
+                          icon={benefit.icon}
+                          title={benefit.title}
+                          description={benefit.description}
                           setSelectedPage={setSelectedPage} />
                    ))}
               </div>
@@ -59,4 +64,4 @@ const Abouts = ({setSelectedPage}: Props) => {
   )
 }
 
-export default Abouts
+export default Benefits

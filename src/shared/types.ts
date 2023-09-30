@@ -1,12 +1,12 @@
 export enum SelectedPage {
   Home = "home",
-  Abouts = "abouts",
+  Benefits = "benefits",
   Classes = "classes",
   Contacts = "contacts"
 }
 
 
-export interface AboutType {
+export interface BenefitType {
   icon: JSX.Element,
   title: string,
   description: string
