@@ -44,7 +44,12 @@ const Abouts = ({setSelectedPage}: Props) => {
               {/* about */}
               <div className='mt-5 items-center justify-between gap-8 md:flex'>
                   {abouts.map((about: AboutType) => (
-                       <Benefit />
+                      <About
+                          key={about.title}
+                          icon={about.icon}
+                          title={about.title}
+                          description={about.description}
+                          setSelectedPage={setSelectedPage} />
                    ))}
               </div>
               
