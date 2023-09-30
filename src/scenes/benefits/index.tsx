@@ -23,7 +23,14 @@ const benefits: Array<BenefitType> = [
         title: "Expert and Pro Trainers",
         description: "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient."
     },
-]
+];
+
+const container = {
+    hidden: {},
+    visible: {
+        transition: {staggerChildren: 0.2}
+    }
+}
 
 type Props = {
     icon: JSX.Element,
@@ -36,7 +43,7 @@ const Benefits = ({setSelectedPage}: Props) => {
   return (
       <section
           id='benefits'
-          className='mx-auto min-h-full w-5/ py-20 '>
+          className='mx-auto min-h-full w-5/6 py-20 '>
           <motion.div
               onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}>
               {/* header */}
@@ -46,8 +53,13 @@ const Benefits = ({setSelectedPage}: Props) => {
                       trainers and classes to get you to your ultimate fitness goals
                       with ease. We provide true care into each and every member.</p>
               </div>
-              {/* about */}
-              <div className='mt-5 items-center justify-between gap-8 md:flex'>
+              {/* benefits */}
+              <motion.div
+                  className='mt-5 items-center justify-between gap-8 md:flex'
+                  initial='hidden'
+                  whileInView='visible'
+                  viewport={{ once: true, amount: 0.5 }}
+              variants={container}>
                   {benefits.map((benefit: BenefitType) => (
                       <Benefit
                           key={benefit.title}
@@ -56,7 +68,7 @@ const Benefits = ({setSelectedPage}: Props) => {
                           description={benefit.description}
                           setSelectedPage={setSelectedPage} />
                    ))}
-              </div>
+              </motion.div>
               
           </motion.div>
           
