@@ -9,7 +9,7 @@ import { useState } from "react";
 
 
 type Props = {
-    isTopOfPage: boolean
+    isTopOfPage: boolean,
     selectedPage: SelectedPage,
     setSelectedPage: (value: SelectedPage) => void;
 }
