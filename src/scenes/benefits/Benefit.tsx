@@ -29,8 +29,8 @@ const Benefit = ({icon, title, description, setSelectedPage}: Props) => {
           <p className='my-3'>{description}</p>
           
            <AnchorLink className='text-sm font-bold text-primary-500 underline hover:text-secondary-500'
-                        onClick={() => setSelectedPage(SelectedPage.Contacts)}
-                    href={`#${SelectedPage.Contacts}`}>
+                        onClick={() => setSelectedPage(SelectedPage.ContactUs)}
+                    href={`#${SelectedPage.ContactUs}`}>
                         <p>Learn more</p>
                    </AnchorLink>
     </motion.div>
